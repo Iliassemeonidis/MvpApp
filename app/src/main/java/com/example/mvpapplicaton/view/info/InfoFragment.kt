@@ -1,13 +1,11 @@
 package com.example.mvpapplicaton.view.info
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.mvpapplicaton.R
+import androidx.fragment.app.Fragment
 import com.example.mvpapplicaton.databinding.FragmentInfoBinding
-
 
 private const val ARG_PARAM1 = "param1"
 

@@ -5,6 +5,7 @@ import com.example.mvpapplicaton.di.app.AppModule
 import com.example.mvpapplicaton.di.cache.RetrofitGithubUsersRepoModule
 import com.example.mvpapplicaton.di.cicerone.CiceroneModule
 import com.example.mvpapplicaton.di.database.DatabaseModule
+import com.example.mvpapplicaton.di.datasours.UserRepoModule
 import com.example.mvpapplicaton.presenter.details.DetailsPresenter
 import com.example.mvpapplicaton.presenter.main.MainPresenter
 import com.example.mvpapplicaton.presenter.user.UsersPresenter
@@ -19,7 +20,8 @@ import javax.inject.Singleton
         AppModule::class,
         DatabaseModule::class,
         RetrofitGithubUsersRepoModule::class,
-        CiceroneModule::class
+        CiceroneModule::class,
+        UserRepoModule::class
     ]
 )
 interface AppComponent {

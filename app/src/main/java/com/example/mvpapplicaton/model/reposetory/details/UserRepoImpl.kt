@@ -6,6 +6,7 @@ import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.schedulers.Schedulers
 
 class UserRepoImpl(private val dataSours: IDataSource) : IUserRepo {
+
     override fun getUserRep(url: String): Single<List<UserRepositories>> =
         dataSours.getUserRep(url).observeOn(Schedulers.io())
 }

@@ -6,8 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.mvpapplicaton.App
 import com.example.mvpapplicaton.databinding.FragmentDetailsBinding
-import com.example.mvpapplicaton.model.data.ApiHolder
-import com.example.mvpapplicaton.model.reposetory.details.UserRepoImpl
 import com.example.mvpapplicaton.presenter.details.DetailsPresenter
 import com.example.mvpapplicaton.view.BackButtonListener
 import com.example.mvpapplicaton.view.details.adapter.DetailsAdapter
@@ -25,7 +23,6 @@ class DetailsFragment : MvpAppCompatFragment(), UsersView, BackButtonListener {
 
     private val userRepoPresenter: DetailsPresenter by moxyPresenter {
         DetailsPresenter(
-            UserRepoImpl(ApiHolder.api),
             arguments?.getParcelable<GithubUser>(ARG_PARAM1)?.reposUrl.toString()
         ).apply { App.instance.appComponent.inject(this) }
     }

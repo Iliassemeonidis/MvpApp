@@ -6,20 +6,12 @@ import com.example.mvpapplicaton.model.db.table.RoomGithubUser
 import com.example.mvpapplicaton.network.INetworkStatus
 import com.example.mvpapplicaton.view.user.GithubUser
 import io.reactivex.rxjava3.core.Single
-import javax.inject.Inject
 
 class RetrofitGithubUsersRepo (
     private val api: IDataSource,
     private val networkStatus: INetworkStatus,
     private val db: Database
     ) : IGithubUsersRepo {
-
-//    @Inject
-//    lateinit var api: IDataSource
-//    @Inject
-//    lateinit var networkStatus: INetworkStatus
-//    @Inject
-//    lateinit var  db: Database
 
     override fun getUsers(): Single<List<GithubUser>> =
         networkStatus.isOnlineSingle().flatMap { isOnline ->

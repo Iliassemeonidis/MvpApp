@@ -12,15 +12,14 @@ import moxy.MvpPresenter
 import javax.inject.Inject
 
 class DetailsPresenter(
-    private val usersRepo: IUserRepo,
     private val url: String
 ) : MvpPresenter<UsersView>() {
 
-    @Inject
-    lateinit var router: Router
+    @Inject lateinit var router: Router
 
-    @Inject
-    lateinit var screens: IScreens
+    @Inject lateinit var screens: IScreens
+
+    @Inject lateinit var  usersRepo: IUserRepo
 
     class UsrListPresenter : IUserListPresenterDetails {
 
